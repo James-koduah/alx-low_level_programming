@@ -12,10 +12,13 @@ int main(void)
 	{
 		for (bb = '0' ; bb <= '9' ; bb++)
 		{
+			if (!(ch == bb))
+			{
 			putchar(ch);
 			putchar(bb);
 			putchar(',');
 			putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
