@@ -11,11 +11,15 @@ int main(void)
 	for (ch = '0' ; ch <= '9' ; ch++)
 	{
 		for (bb = ch + 1 ; bb <= '9' ; bb++)
-		{	
+		{
 			if (!(ch == bb))
 			{
 			putchar(ch);
 			putchar(bb);
+			if (ch == '8' && bb == '9')
+			{
+				break;
+			}
 			putchar(',');
 			putchar(' ');
 			}
