@@ -13,7 +13,7 @@ int main(void)
 	{
 		for (bb = ch + 1 ; bb <= '9' ; bb++)
 		{
-			for (cc = ch + 2 ; cc <= '9' ; cc++)
+			for (cc = bb + 1 ; cc <= '9' ; cc++)
 			{
 				if (!(ch == bb) && !(bb == cc))
 				{
