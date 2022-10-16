@@ -10,8 +10,8 @@ int main(void)
 
 	for (ch = '0' ; ch <= '9' ; ch++)
 	{
-		for (bb = '0' ; bb <= '9' ; bb++)
-		{
+		for (bb = ch + 1 ; bb <= '9' ; bb++)
+		{	
 			if (!(ch == bb))
 			{
 			putchar(ch);
