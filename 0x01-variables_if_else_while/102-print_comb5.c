@@ -9,15 +9,22 @@ int main(void)
 	int bb;
 	int cc;
 	int dd;
+	int hh;
 
 	for (aa = '0' ; aa <= '9'; aa++)
 	{
+		hh = 1;
 		for (bb = '0' ; bb <= '9' ; bb++)
 		{
 			for (cc = aa ; cc <= '9' ; cc++)
 			{
 				for (dd = '0' ; dd <= '9' ; dd++)
-				{	
+				{
+					if (hh == 1)
+					{
+						dd = bb + 1;
+						hh = 3;
+					}
 					putchar(aa);
 					putchar(bb);
 					putchar(' ');
