@@ -17,21 +17,18 @@ int main(void)
 			for (cc = aa ; cc <= '9' ; cc++)
 			{
 				for (dd = '0' ; dd <= '9' ; dd++)
-				{
-					if (!(aa == cc) && !(bb ==dd))
-					{
+				{	
 					putchar(aa);
 					putchar(bb);
 					putchar(' ');
 					putchar(cc);
 					putchar(dd);
-					if(aa == '9' && bb == '8')
+					if (aa == '9' && bb == '8')
 					{
 						break;
 					}
 					putchar(',');
 					putchar(' ');
-					}
 				}
 			}
 		}
