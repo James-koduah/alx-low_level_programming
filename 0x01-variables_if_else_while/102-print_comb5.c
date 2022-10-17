@@ -16,8 +16,10 @@ int main(void)
 		{
 			for (cc = aa ; cc <= '9' ; cc++)
 			{
-				for (dd = bb+1 ; dd <= '9' ; dd++)
+				for (dd = '0' ; dd <= '9' ; dd++)
 				{
+					if (!(aa == cc) && !(bb ==dd))
+					{
 					putchar(aa);
 					putchar(bb);
 					putchar(' ');
@@ -29,6 +31,7 @@ int main(void)
 					}
 					putchar(',');
 					putchar(' ');
+					}
 				}
 			}
 		}
