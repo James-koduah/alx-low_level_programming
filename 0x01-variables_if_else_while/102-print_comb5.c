@@ -10,7 +10,9 @@ int main(void)
 	int cc;
 	int dd;
 	int hh;
+	int nu;
 
+	nu = 0;
 	for (aa = '0' ; aa <= '9'; aa++)
 	{
 		for (bb = '0' ; bb <= '9' ; bb++)
@@ -20,9 +22,9 @@ int main(void)
 			{
 				for (dd = '0' ; dd <= '9' ; dd++)
 				{
-					if (hh == 1)
+					if (hh == 1 && bb > 0)
 					{
-						dd = bb;
+						dd = bb + 1;
 						hh = 3;
 					}
 					putchar(aa);
