@@ -11,9 +11,9 @@ int main(void)
 	int dd;
 	int hh;
 
+	hh = 1;
 	for (aa = '0' ; aa <= '9'; aa++)
 	{
-		hh = 1;
 		for (bb = '0' ; bb <= '9' ; bb++)
 		{
 			for (cc = aa ; cc <= '9' ; cc++)
@@ -22,7 +22,7 @@ int main(void)
 				{
 					if (hh == 1)
 					{
-						dd = bb + 1;
+						dd = dd + bb + 1;
 						hh = 3;
 					}
 					putchar(aa);
