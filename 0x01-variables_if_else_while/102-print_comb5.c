@@ -20,7 +20,7 @@ int main(void)
 			{
 				for (dd = '0' ; dd <= '9' ; dd++)
 				{
-					if (hh == 1 && bb > 0)
+					if (hh == 1 && !(bb == 0))
 					{
 						dd = bb + 1;
 						hh = 3;
