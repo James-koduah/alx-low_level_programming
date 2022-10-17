@@ -10,7 +10,6 @@ int main(void)
 	int cc;
 	int dd;
 	int hh;
-	int nu;
 
 	nu = 0;
 	for (aa = '0' ; aa <= '9'; aa++)
