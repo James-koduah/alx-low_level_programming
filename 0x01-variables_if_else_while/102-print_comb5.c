@@ -11,7 +11,6 @@ int main(void)
 	int dd;
 	int hh;
 
-	nu = 0;
 	for (aa = '0' ; aa <= '9'; aa++)
 	{
 		for (bb = '0' ; bb <= '9' ; bb++)
