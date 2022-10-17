@@ -11,11 +11,11 @@ int main(void)
 	int dd;
 	int hh;
 
-	hh = 1;
 	for (aa = '0' ; aa <= '9'; aa++)
 	{
 		for (bb = '0' ; bb <= '9' ; bb++)
-		{
+		{  
+			hh = 1;
 			for (cc = aa ; cc <= '9' ; cc++)
 			{
 				for (dd = '0' ; dd <= '9' ; dd++)
