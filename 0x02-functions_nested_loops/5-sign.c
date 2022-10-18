@@ -7,22 +7,24 @@
 int print_sign(int n)
 {
 	int ch;
+	char bb;
 
 	if (n < 0)
 	{
-		putchar('-');
+		bb = '-';
 		ch = -1;
 	}
 	else
 	if (n > 0)
 	{
-		putchar('+');
+		bb = '+';
 		ch = 1;
 	}
 	else
 	{
-		putchar('0');
+		bb = '0';
 		ch = 0;
 	}
+	putchar(bb);
 	return (ch);
 }
