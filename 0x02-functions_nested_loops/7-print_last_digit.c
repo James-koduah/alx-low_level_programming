@@ -5,7 +5,7 @@
  * @c: kdkdk
  * Return: kskskks
  */
-int _putchar(char c)
+int _putchar(char c);
 int print_last_digit(int n)
 {
 	int ch;
