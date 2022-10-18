@@ -25,7 +25,7 @@ void jack_bauer(void)
 				dd = 0;
 				while (dd <= 9)
 				{
-					printf("%d%d : %d%d\n", aa, bb, cc, dd);
+					printf("%d%d:%d%d\n", aa, bb, cc, dd);
 					dd++;
 				}
 				cc++;
