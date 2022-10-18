@@ -1,10 +1,9 @@
 #include <stdio.h>
 /**
- * print_alphabet - kdk
- * Return: kskks
+ * print_alphabet - kdkdk
+ * Return: dkdk
  */
-
-void print_alphabet()
+void print_alphabet(void)
 {
 	int ch;
 
@@ -12,6 +11,5 @@ void print_alphabet()
 	{
 		putchar(ch);
 	}
-	putchar("\n");
-	return;
+	putchar('\n');
 }
