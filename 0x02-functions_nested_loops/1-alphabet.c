@@ -4,14 +4,14 @@
  * main - dddddd
  * Return: ksslsl
  */
-int print_alphabet();
+void print_alphabet(void);
 int main(void)
 {
 	print_alphabet();
 	return (0);
 }
 
-int print_alphabet()
+void print_alphabet()
 {
 	int ch;
 
@@ -20,5 +20,5 @@ int print_alphabet()
 		putchar(ch);
 	}
 	putchar('\n');
-	return (0);
+	return;
 }
