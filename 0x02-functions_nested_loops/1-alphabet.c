@@ -1,16 +1,8 @@
-#include <stdio.h>
-#include "main.h"
 /**
- * main - dddddd
- * Return: ksslsl
+ * print_alphabet - kdk
+ * Return: kskks
  */
-void print_alphabet();
-
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
+#include "main.h"
 
 void print_alphabet()
 {
@@ -20,6 +12,6 @@ void print_alphabet()
 	{
 		putchar(ch);
 	}
-	putchar('\n');
+	putchar("\n");
 	return;
 }
