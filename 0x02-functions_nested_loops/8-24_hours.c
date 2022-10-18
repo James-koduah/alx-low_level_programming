@@ -1,8 +1,10 @@
 #include <stdio.h>
 /**
  * jack_bauer - kdkdkdk
+ * @c: kdkdkdk
  * Return: kdkdkdk
  */
+int _putchar(char c);
 void jack_bauer(void)
 {
 	int aa;
@@ -25,7 +27,12 @@ void jack_bauer(void)
 				dd = 0;
 				while (dd <= 9)
 				{
-					printf("%d%d:%d%d\n", aa, bb, cc, dd);
+					_putchar(aa + '0');
+					_putchar(bb + '0');
+					_putchar(':');
+					_putchar(cc + '0');
+					_putchar(dd + '0');
+					_putchar('\n');
 					dd++;
 				}
 				cc++;
