@@ -4,7 +4,7 @@
  * main - dddddd
  * Return: ksslsl
  */
-void print_alphabet(void);
+void print_alphabet();
 int main(void)
 {
 	print_alphabet();
