@@ -25,6 +25,5 @@ int print_sign(int n)
 		bb = '0';
 		ch = 0;
 	}
-	printf("%d", bb);
 	return (ch);
 }
