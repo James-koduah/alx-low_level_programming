@@ -1,15 +1,16 @@
 #include <stdio.h>
 /**
  * print_last_digit - maisll
- * @n: kdkdk
+ * _putchar - kdkdkdkd
+ * @c: kdkdk
  * Return: kskskks
  */
-int print_sign(int n);
-int print_last_digit(int c)
+int _putchar(char c)
+int print_last_digit(int n)
 {
 	int ch;
 
-	ch = c % 10;
+	ch = n % 10;
 	_putchar(ch);
 	return (ch);
 }
