@@ -13,7 +13,7 @@ int print_sign(int n)
 	{
 		bb = '-';
 		ch = -1;		 
-		putchar(bb);
+		_putchar(bb);
 		return (ch);
 	}
 	else
@@ -21,14 +21,14 @@ int print_sign(int n)
 	{
 		bb = '+';
 		ch = 1;		 
-		putchar(bb);
+		_putchar(bb);
 		return (ch);
 	}
 	else
 	{
 		bb = '0';
 		ch = 0;		
-		putchar(bb);
+		_putchar(bb);
 		return (ch);
 	}
 }
