@@ -1,8 +1,8 @@
+#include <stdio.h>
 /**
  * print_alphabet - kdk
  * Return: kskks
  */
-#include "main.h"
 
 void print_alphabet()
 {
