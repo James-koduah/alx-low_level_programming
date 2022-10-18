@@ -6,27 +6,18 @@
 int main(void)
 {
 	int three;
-	int threeSum;
-	int five;
-	int fiveSum;
 	int total;
 
-	three = 3;
-	threeSum = 0;
+	three = 0;
+	total = 0;
 	while (three < 1024)
 	{
-		threeSum = threeSum + three ;
-		three = three + 3;
+		if ((three % 3) == 0 || (three % 5) == 0)
+		{
+			total += three;
+		}
+		three++;
 	}
-	
-	five = 5;
-	fiveSum = 0;
-	while (five <1024)
-	{
-		fiveSum = fiveSum + five;
-		five = five + 5;
-	}
-	total = fiveSum + threeSum;
 
 
 	printf("%d\n", total);
