@@ -12,18 +12,23 @@ int print_sign(int n)
 	if (n < 0)
 	{
 		bb = '-';
-		ch = -1;
+		ch = -1;		 
+		putchar(bb);
+		return (ch);
 	}
 	else
 	if (n > 0)
 	{
 		bb = '+';
-		ch = 1;
+		ch = 1;		 
+		putchar(bb);
+		return (ch);
 	}
 	else
 	{
 		bb = '0';
-		ch = 0;
+		ch = 0;		
+		putchar(bb);
+		return (ch);
 	}
-	return (ch);
 }
