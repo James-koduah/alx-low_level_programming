@@ -14,7 +14,7 @@ int _islower(int c)
 	}
 	else
 	{
-		vh = 0
+		vh = 0;
 	}
 	return (vh);
 }
