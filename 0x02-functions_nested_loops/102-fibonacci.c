@@ -5,13 +5,13 @@
  */
 int main(void)
 {
-	int aa;
-	int bb;
+	long int aa;
+	long int bb;
 	int ii;
-	int cc;
+	long int cc;
 
 	aa = 1;
-	bb = 0;
+	bb = 1;
 	for (ii = 0; ii <= 50; ii++)
 	{
 		if (ii != 0)
