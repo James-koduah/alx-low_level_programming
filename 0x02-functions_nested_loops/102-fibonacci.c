@@ -18,7 +18,7 @@ int main(void)
 		{
 		printf(", ");
 		}
-		printf("%d", aa);
+		printf("%ld", aa);
 		cc = bb + aa;
 		bb = aa;
 		aa = cc;
