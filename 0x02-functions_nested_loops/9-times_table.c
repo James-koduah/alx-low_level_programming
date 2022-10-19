@@ -19,8 +19,8 @@ void times_table(void)
 			{
 				if (jj <=9)
 				{
-					printf(", \s");
-					putchar(' ');
+					printf(",  ");
+					printf(" ");
 				}
 				else
 				{
