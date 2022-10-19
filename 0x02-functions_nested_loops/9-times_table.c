@@ -3,7 +3,8 @@
  * times_table - kdkdkdk
  * Return: kdkdk
  */
-void main(void)
+int _putchar(char c);
+void times_table(void)
 {
 	int ch;
 	int ii;
@@ -21,6 +22,6 @@ void main(void)
 				printf(", ");
 			}
 		}
-		printf("\n");
+		putchar('\n');
 	}
 }
