@@ -18,11 +18,8 @@ void times_table(void)
 			jj = ii * ch;
 			_putchar((jj / 10) + '0');
 			_putchar((jj % 10) + '0');
-			if (ii < 9)
-			{
-				putchar(',');
-				putchar(' ' );
-			}
+			putchar(',');
+			putchar(' ' );			
 		}
 		putchar('\n');
 	}
