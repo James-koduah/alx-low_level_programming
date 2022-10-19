@@ -10,12 +10,14 @@ int main(void)
 	int ii;
 	int cc;
 
-	printf("0");
 	aa = 1;
 	bb = 0;
 	for (ii = 0; ii <= 50; ii++)
 	{
+		if (ii != 0)
+		{
 		printf(", ");
+		}
 		printf("%d", aa);
 		cc = bb + aa;
 		bb = aa;
