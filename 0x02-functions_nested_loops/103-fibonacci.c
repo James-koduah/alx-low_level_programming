@@ -13,7 +13,7 @@ int main(void)
 
 	aa = 1;
 	bb = 1;
-	for (ii = 0; ii < 50; ii++)
+	for (ii = 0; ii < 32; ii++)
 	{
 		cc = bb + aa;
 		bb = aa;
