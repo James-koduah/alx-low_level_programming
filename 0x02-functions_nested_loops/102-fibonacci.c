@@ -23,5 +23,6 @@ int main(void)
 		bb = aa;
 		aa = cc;
 	}
+	putchar('\n');
 	return (0);
 }
