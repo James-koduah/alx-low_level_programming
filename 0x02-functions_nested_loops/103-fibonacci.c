@@ -13,8 +13,13 @@ int main(void)
 
 	aa = 1;
 	bb = 1;
-	for (ii = 0; ii < 32; ii++)
+	dd = 0;
+	for (ii = 0; ii < 50; ii++)
 	{
+		if (aa > 4000000)
+		{
+			break;
+		}
 		cc = bb + aa;
 		bb = aa;
 		aa = cc;
