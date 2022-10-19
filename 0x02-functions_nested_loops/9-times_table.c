@@ -1,10 +1,8 @@
 #include <stdio.h>
 /**
  * times_table - kdkdkdk
- * @c: kdkdkdk
  * Return: kdkdk
  */
-int _putchar(char c);
 void times_table(void)
 {
 	int ch;
@@ -17,9 +15,18 @@ void times_table(void)
 		{
 			jj = ii * ch;
 			printf("%d", jj);
-			putchar(',');
-			putchar(' ');
+			if (ii < 9)
+			{
+				if (jj <=9)
+				{
+					printf(",  ");
+				}
+				else
+				{
+					printf(", ");
+				}
+			}
 		}
-		putchar('\n');
+		printf("\n");
 	}
 }
