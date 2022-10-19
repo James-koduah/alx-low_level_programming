@@ -20,7 +20,7 @@ int main(void)
 		aa = cc;
 		if ((cc % 2) == 0)
 		{
-			dd += cc
+			dd += cc;
 		}
 	}
 	printf("%ld", dd);
