@@ -16,10 +16,9 @@ void times_table(void)
 		for (ii = 0; ii <= 9; ii++)
 		{
 			jj = ii * ch;
-			_putchar((jj / 10) + '0');
-			_putchar((jj % 10) + '0');
+			printf("%d", jj);
 			putchar(',');
-			putchar(' ' );			
+			putchar(' ');
 		}
 		putchar('\n');
 	}
