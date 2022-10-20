@@ -19,7 +19,7 @@ void more_numbers(void)
 		{
 			putchar('1');
 			putchar(vv);
-			printf('\n');
+			printf("\n");
 		}
 
 	}
