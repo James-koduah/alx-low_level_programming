@@ -1,11 +1,12 @@
-#include <stdio.h>
+#include <stdio>
 /**
  * print_square - kdksk
  * @size: kdkdk
  * Return: dkdkk
  */
-void print_square(int size)
+void main(int size)
 {
+size = 5;
 	if (size > 0)
 	{
 		for (int ii = 0; ii < size; ii++)
