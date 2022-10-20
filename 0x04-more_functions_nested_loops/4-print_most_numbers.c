@@ -3,7 +3,7 @@
  * print_most_numbers - dkkdkd
  * Return: kskskksk
  */
-void main(void)
+void print_most_numbers(void)
 {
 	int ch;
 
