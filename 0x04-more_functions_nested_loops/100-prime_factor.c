@@ -12,7 +12,6 @@ int main(void)
 
 	num = 612852475143;
 	n = num / 2;
-	printf("working...\n");
 	for (ii = 3; ii < n ; ii += 2)
 	{
 		if ((num % ii) == 0)
