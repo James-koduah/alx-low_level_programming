@@ -3,7 +3,7 @@
  * main - kdkdk
  * Return: kddkkd
  */
-void main(void)
+int main(void)
 {
 	int ch;
 
@@ -28,4 +28,5 @@ void main(void)
 		}
 	}
 	putchar('\n');
+	return (0);
 }
