@@ -11,16 +11,14 @@ void more_numbers(void)
 
 	for (ten = 0; ten < 10; ten++)
 	{
-		for (ii = 0; ii <= 9; ii++)
+		for (ii = 0; ii <= 14; ii++)
 		{
-			putchar(ii);
+			if (ii > 9)
+			{
+				putchar((ii / 10) + '0');
+			}
+			putchar((ii % 10) + '0');
 		}
-		for (vv = 0; vv < 5; vv++)
-		{
-			putchar('1');
-			putchar(vv);
-			printf("\n");
-		}
-
+		putchar('\n');
 	}
 }
