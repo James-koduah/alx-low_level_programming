@@ -13,14 +13,16 @@ int main(void)
 		{
 			putchar(' ');
 		}
-		if (ch % 3 == 0)
+		if (ch % 3 == 0 || ch % 5 == 0)
 		{
-			printf("Fizz");
-		}
-		else
-		if (ch % 5 == 0)
-		{
-			printf("Buzz");
+			if (ch % 3 == 0)
+			{
+				printf("Fizz");
+			}
+			if (ch % 5 == 0)
+			{
+				printf("Buzz");
+			}
 		}
 		else
 		{
