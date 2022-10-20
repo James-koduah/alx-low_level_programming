@@ -1,11 +1,11 @@
 #include <stdio.h>
 /**
- * main - kdkdkkd
+ * print_number - kdkdkkd
  * @c: kdkdk
  * Return: kddjsj
  */
 int _putchar(char c);
-void main(int n)
+void print_number(int n)
 {
 	if (n < 0)
 	{
