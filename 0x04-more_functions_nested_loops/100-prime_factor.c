@@ -5,27 +5,24 @@
  */
 int main(void)
 {
-	long int num;
-	long int ii;
-	long int n;
+	long prime = 612852475143, div;
 
-
-	num = 612852475143;
-	n = num / 2;
-	for (ii = 3; ii < n ; ii += 2)
+	while (div < (prime / 2))
 	{
-		if ((num % ii) == 0)
+		if ((prime % 2) == 0)
 		{
-			num /= ii;
+			prime /= 2;
+			continue;
+		}
+
+		for (div = 3; div < (prime / 2); div += 2)
+		{
+			if ((prime % div) == 0)
+				prime /= div;
 		}
 	}
 
+	printf("%ld\n", prime);
 
-
-
-
-
-
-	printf("%ld\n", num);
 	return (0);
 }
