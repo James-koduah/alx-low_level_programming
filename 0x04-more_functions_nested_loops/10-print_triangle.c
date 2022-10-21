@@ -6,7 +6,6 @@
  */
 void print_triangle(int size)
 {
-	int ch;
 	int ii;
 	int jj;
 	int sp;
@@ -29,6 +28,7 @@ void print_triangle(int size)
 			}
 			ha += 1;
 			sp -= 1;
+			putchar('\n');
 		}
 	}
 	else
