@@ -4,7 +4,7 @@
  * @str: kskskks
  * Return: lskdkdk
  */
-void _puts2(char *str)
+void puts2(char *str)
 {
 	while (*str != 0)
 	{
