@@ -7,9 +7,11 @@
  */
 int _strlen(char *s)
 {
-	int len;
-	int bb = *s;
-
-	len = strlen(bb);
-	return (len);
+	int jj;
+	jj = 1;
+	while (*s++ != 0)
+	{
+		jj++;
+	}
+	return (jj);
 }
