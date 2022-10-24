@@ -7,6 +7,7 @@
 void print_rev(char *s)
 {
 	int jj;
+	int i;
 
 	jj = 0;
 	while (*s++)
@@ -14,7 +15,7 @@ void print_rev(char *s)
 		jj++;
 	}
 
-	for (int i = jj - 1; jj > 0; jj--)
+	for (i = jj - 1; jj > 0; jj--)
 	{
 		putchar(s[jj]);
 	}
