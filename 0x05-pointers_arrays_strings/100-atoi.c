@@ -24,9 +24,9 @@ int _atoi(char *s)
 	}
 	if (a == '-')
 	{
-		s[v - 1] = '-';
+		*s[v - 1] = '-';
 	}
-	if (s[v - 1] == '-' || s[v -1] == '+')
+	if (s[v - 1] == '-' || s[v - 1] == '+')
 	{
 		p = &s[v - 1];
 	}
@@ -37,6 +37,6 @@ int _atoi(char *s)
 
 	x = atoi(p);
 
-	
+
 	return (x);
 }
