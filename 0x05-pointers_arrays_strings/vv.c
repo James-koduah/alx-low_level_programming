@@ -1,23 +1,33 @@
 #include <stdio.h>
 /**
- * print_rev - print a string form a pointed position
- * @s: kskskks
- * Return: lskdkdk
+ * rev_string - reverse string
+ * @s: arrray of string
+ * Return: kskskks
  */
 int main(void)
 {
-	char *s;
-	int jj;
-	jj = 13;
-	    s = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-	
-	int i = 62;
-	while (i > 0)
-	{
-		putchar(*(s + i));
-		i--;
-		
+	int j;
+	int i;
+	char a;
+	char s[10] = "My School";
 
+
+	i = 0;
+	j = 0;
+	while (s[j] != 0)
+	{	 
+		j++;
 	}
-	putchar('\n');
+j--;
+
+	char cc[j];
+printf("%s\n",s);
+	while (j >= 0 )
+	{
+		cc[i] = s[j];
+		i++;
+		j--;
+	}
+	printf("%s\n", cc);
+	return (0);
 }
