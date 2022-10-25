@@ -4,39 +4,23 @@
  * _atoi - use atoi
  * @s: kdkdkd
  * Return: dkdkdk
- */
+*/
 int _atoi(char *s)
 {
-	int x;
-	char *p;
-	int v;
-	char a;
+	int sign = 1;
+	unsigned int num = 0;
 
-	v = 0;
+	do {
+		if (*s == '-')
+			sign *= -1;
 
-	while (!(s[v] > '0' && s[v] <= '9'))
-	{
-		if (s[v] == '-')
-		{
-			a = '-';
-		}
-		v++;
-	}
-	if (a == '-')
-	{
-		*s[v - 1] = '-';
-	}
-	if (s[v - 1] == '-' || s[v - 1] == '+')
-	{
-		p = &s[v - 1];
-	}
-	else
-	{
-		p = &s[v];
-	}
+		else if (*s >= '0' && *s <= '9')
+			num = (num * 10) + (*s - '0');
 
-	x = atoi(p);
+		else if (num > 0)
+			break;
 
+	} while (*s++);
 
-	return (x);
+	return (num * sign);
 }
