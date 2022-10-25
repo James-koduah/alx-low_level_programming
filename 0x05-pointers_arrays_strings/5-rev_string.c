@@ -14,10 +14,11 @@ void rev_string(char *s)
 	j = 0;
 	while (s[j] != 0)
 	{
+		 
+	putchar(j);
 		j++;
 	}
 
-	putchar(j);
 	while (j >= 0)
 	{
 		
