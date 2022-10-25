@@ -10,12 +10,21 @@ int _atoi(char *s)
 	int x;
 	char *p;
 	int v;
+	char a;
 
 	v = 0;
 
 	while (!(s[v] > '0' && s[v] <= '9'))
 	{
+		if (s[v] == '-')
+		{
+			a = '-';
+		}
 		v++;
+	}
+	if (a == '-')
+	{
+		s[v - 1] = '-';
 	}
 	if (s[v - 1] == '-' || s[v -1] == '+')
 	{
