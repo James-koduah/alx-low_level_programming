@@ -1,12 +1,22 @@
 #include <stdio.h>
 /**
- * rev_string - kdkkdkd
- * @s: skksksk
- * Return: kdkdkkd
+ * rev_string - reverse string
+ * @s: arrray of string
+ * Return: kskskks
  */
 void rev_string(char *s)
 {
-	int ch;
+	int j;
 
-	for (ch = 
+	j = 0;
+	while (s[j] != 0)
+	{
+		j++;
+	}
+	while (j >= 0)
+	{
+		putchar(s[jj]);
+		j--;
+	}
+	putchar('\n');
 }
