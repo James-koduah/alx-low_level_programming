@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 /**
  * rev_string - reverse string
  * @s: arrray of string
@@ -6,24 +7,14 @@
  */
 void rev_string(char *s)
 {
-	int j;
-	int i;
+	int len = strlen(s);
+	int mid = len / 2;
 	char t;
+	int i;
 
-	i = 0;
-	j = 0;
-	while (s[j] != 0)
+	for (i = 0; i < mid; i++)
 	{
-		j++;
+		t = s[len - i - 1];
+		s[len - i - 1] = t;
 	}
-j--;
-	while (j >= (j / 2))
-	{
-		t = s[i];
-		s[i] = s[j];
-		s[j] = t;
-		i++;
-		j--;
-	}
-
 }
