@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 /**
  * puts_half - print second hslf of string
  * @str: kksksk
@@ -7,8 +6,6 @@
  */
 void puts_half(char *str)
 {
-	int len;
-	int mid;
 	int i;
 	int n;
 	
