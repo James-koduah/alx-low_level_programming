@@ -27,7 +27,7 @@ int _atoi(char *s)
 	}
 
 	x = atoi(p);
-	printf("%d", x);
+
 	
 	return (x);
 }
