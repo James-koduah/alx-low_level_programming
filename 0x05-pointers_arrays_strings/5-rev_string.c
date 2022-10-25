@@ -8,6 +8,7 @@ void rev_string(char *s)
 {
 	int j;
 	int i;
+	char b[10];
 
 
 	i = 0;
@@ -19,7 +20,7 @@ void rev_string(char *s)
 	putchar(j);
 	}
 
-	char c[10];
+	
 
 	while (j >= 0)
 	{
