@@ -8,7 +8,25 @@
 int _atoi(char *s)
 {
 	int x;
+	char *p;
+	int v;
 
-	x = atoi(s);
+	v = 0;
+
+	while (!(s[v] > '0' && s[v] <= '9'))
+	{
+		v++;
+	}
+	if (s[v - 1] == '-' || s[v -1] == '+')
+	{
+		p = &s[v - 1];
+	}
+	else
+	{
+		p = &s[v];
+	}
+
+	x = atoi(p);
+	
 	return (x);
 }
