@@ -24,7 +24,7 @@ char *rot13(char *n)
 			}
 
 		}
-		
+
 
 		i++;
 	}
