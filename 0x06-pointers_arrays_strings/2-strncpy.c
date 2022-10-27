@@ -5,6 +5,7 @@
  * @dest: kdkdkdk
  * @src: kdkdkdk
  * @n: kskskks
+ * Return: kdkdk
  */
 char *_strncpy(char *dest, char *src, int n)
 {
