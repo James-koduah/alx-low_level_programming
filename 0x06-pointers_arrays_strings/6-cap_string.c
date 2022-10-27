@@ -27,7 +27,7 @@ char *cap_string(char *n)
 			n[i] == ' ' 
 		   )
 		{
-			if (n[i + 1] >= 97 && n[i + 1] <= 122)
+			if (n[i + 1] >= 'a' && n[i + 1] <= 'z')
 			{
 				n[i + 1] -= 32;
 			}
