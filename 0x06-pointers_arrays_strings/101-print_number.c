@@ -4,7 +4,7 @@
  * @c: kdkdk
  * Return: kddjsj
  */
-int _putchar(char c)
+int _putchar(char c);
 void print_number(int n)
 {
 	unsigned int num = n;
