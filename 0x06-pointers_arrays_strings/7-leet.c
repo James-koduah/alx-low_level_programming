@@ -13,12 +13,12 @@ char *leet(char *n)
 	i = 0;
 	j = 0;
 
-	while (n[i])
+	while (n[i] != 0)
 	{
 		for (j = 0; j < 8; j++)
 		{
-			if (n[i] == a[j] || n[i] == a[j - 32])
-				n[i] = j;
+			if (n[i] == a[j] || n[i] == a[j] + 32)
+				n[i] = j + '0';
 		}
 
 		i++;
