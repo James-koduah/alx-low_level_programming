@@ -5,6 +5,7 @@
  * @dest: ksksksk
  * @src: ksksksk
  * @n: kskksks
+ * Return: skskskks
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
