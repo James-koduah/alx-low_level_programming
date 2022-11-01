@@ -9,10 +9,10 @@ void print_diagsums(int *a, int size)
 {
 	int b;
 	int vv;
-	
+
 
 	vv = 0;
-	for (b = 0;b < size; b++)
+	for (b = 0; b < size; b++)
 	{
 		vv += a[b];
 		a += size;
