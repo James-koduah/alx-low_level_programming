@@ -16,16 +16,17 @@ int is_palindrome(char *s)
 
 	dest = (char*)malloc(20);
 	
-	strcpy(dest, s);
-
+	strcpy(dest, s);	
 	b = _strlen(s);
-	dest = rev(dest, 0, b); 	
+	rev(dest, 0, b); 	
 	q = strcmp(s, dest);
-	while (*s != 0)
+	if (q == 0)
 	{
-		
-		putchar(*s);
-		s++;
+		q = 1;
+	}
+	else
+	{
+		q = 0;
 	}
 	return (q);
 	
