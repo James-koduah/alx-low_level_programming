@@ -14,7 +14,7 @@ int is_palindrome(char *s)
 	int q;
 	char *dest;
 
-	dest = (char*)malloc(20);
+	dest = (char*)malloc(400);
 	
 	strcpy(dest, s);	
 	b = _strlen(s);
