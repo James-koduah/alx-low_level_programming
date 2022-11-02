@@ -14,11 +14,12 @@ int is_palindrome(char *s)
 	int q;
 	char *dest;
 
-	dest = (char*)malloc(400);
-	
-	strcpy(dest, s);	
+	dest = (char *)malloc(400);
+
+	strcpy(dest, s);
+
 	b = _strlen(s);
-	rev(dest, 0, b); 	
+	rev(dest, 0, b);
 	q = strcmp(s, dest);
 	if (q == 0)
 	{
@@ -29,9 +30,16 @@ int is_palindrome(char *s)
 		q = 0;
 	}
 	return (q);
-	
+
 }
 
+/**
+ * rev - kskskks
+ * @s: kskskks
+ * @i: kskskks
+ * @len: kskskks
+ * Return: kskksk
+ */
 void rev(char *s, int i, int len)
 {
 	char t;
@@ -41,16 +49,21 @@ void rev(char *s, int i, int len)
 	t = s[i];
 	s[i] = s[len - i - 1];
 	s[len - i - 1] = t;
-	rev(s, (i + 1),len);
+	rev(s, (i + 1), len);
 	}
 }
 
+/**
+ * _strlen - ksksk
+ * @s: ksksksk
+ * Return: kskskks
+ */
 int _strlen(char *s)
 {
 	int jj;
 
 	jj = 0;
-	
+
 	if (*s != 0)
 	{
 		jj++;
