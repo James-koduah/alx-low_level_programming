@@ -18,6 +18,7 @@ int _sqrt_recursion(int n)
  * square - kskkssk
  * @n: initial number to be decreased regularly
  * @odd: starts with one and two will be added to get the odd numbers
+ * @odd: kskskks
  * Return: if the process runs through mostly one
  */
 int square(int n, int odd)
