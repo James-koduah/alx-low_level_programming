@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * _sqrt_recursion - find the square root of a number
- * @n: number to find square root of 
+ * @n: number to find square root of
  * Return: square root of @n
  */
 int square(int n, int odd);
