@@ -33,8 +33,9 @@ int square(int n, int odd)
 
 	a = 0;
 	a = n - odd;
-/**
- * if a after (n - odd)  is less than zero it means the number we were given does not hava a perfect square
+/*
+ * if a after (n - odd)  is less than zero it means
+ * the number we were given does not hava a perfect square
  * so we return -1
  */
 	if (a <= 0)
