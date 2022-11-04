@@ -17,7 +17,9 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
+
 	b = atoi(argv[1]);
+
 	if (b / 25 >= 1)
 	{
 		c += b / 25;
