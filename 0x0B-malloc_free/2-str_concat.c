@@ -18,16 +18,13 @@ char *str_concat(char *s1, char *s2)
 	a = strlen(s2);
 	c = a + v;
 	b = malloc(c);
-	for (c = 0; c < v - 1; c++)
+	for (c = 0; c < v; c++)
 	{
 		b[c] = s1[c];
 	}
-	v = 0;
-	for (v = 0; v < a; v++)
-	{
-		c++;
-		b[c] = s2[v];
-	}
+
+	strcat(b, s2);
+
 
 	return (b);
 }
