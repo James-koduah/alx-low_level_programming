@@ -9,17 +9,20 @@
 char *_strdup(char *str)
 {
 	char *b;
+	int c;
+
+	c = strlen(str);
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 
-	b = malloc(sizeof(char) * 100);
+	b = malloc(c);
 	if (b == NULL)
 	{
 		return (NULL);
 	}
 	strcpy(b, str);
-	return (b);
+	return (b);		
 }
