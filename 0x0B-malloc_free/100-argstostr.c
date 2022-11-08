@@ -23,10 +23,10 @@ char *argstostr(int ac, char **av)
 	len = 0;
 	si = 0;
 
-	if (arr == NULL)
-	{
-		return (NULL);
-	}
+
+
+
+
 
 	for (i = 0; i < ac; i++)
 	{
