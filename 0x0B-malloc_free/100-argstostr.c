@@ -24,10 +24,6 @@ char *argstostr(int ac, char **av)
 	si = 0;
 
 
-
-
-
-
 	for (i = 0; i < ac; i++)
 	{
 		len += strlen(av[i]);
