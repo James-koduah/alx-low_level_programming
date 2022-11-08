@@ -15,6 +15,11 @@ char *argstostr(int ac, char **av)
 	int len;
 	int si;
 
+	if (ac == 0 || av == NULL)
+	{
+		return (NULL);
+	}
+
 	len = 0;
 	si = 0;
 	arr = malloc(sizeof(char *) * ac);
