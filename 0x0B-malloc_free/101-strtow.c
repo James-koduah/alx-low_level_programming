@@ -66,7 +66,7 @@ char **strtow(char *str)
 
 		for(j = m; j < len; j++)
 		{
-			if (str[len - 1] == ' ')
+			if (j == len -1 && str[len - 1] == ' ')
 				break;
 			if(str[j] != ' ')
 			{
