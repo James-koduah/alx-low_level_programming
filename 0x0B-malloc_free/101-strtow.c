@@ -20,9 +20,10 @@ char **strtow(char *str)
 	
 	len = strlen(str);
 	if (str == NULL || str[0]== '\0')
-	{
 		return (NULL);
-	}
+	if (len == 0)
+		return (NULL);
+
 	m = 0;
 	height = 0;
 	b = 0;
