@@ -73,7 +73,7 @@ char **strtow(char *str)
 				if(str[j + 1] == ' ')
 				{
 					m = j+1;
-					arr[i][b + 1] = '\0';
+
 					j = len;
 				}
 			}
