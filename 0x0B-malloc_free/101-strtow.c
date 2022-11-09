@@ -53,11 +53,11 @@ char **strtow(char *str)
 		
 
 
-	for (i = 0; i <= height; i++)
+	for (i = 0; i < height; i++)
 	{
 		arr[i] = malloc(sizeof(char) * vv[i]);
 		if (arr[i] == NULL)
-			printf("shit\n");
+			return (NULL);
 		b =0;
 
 
