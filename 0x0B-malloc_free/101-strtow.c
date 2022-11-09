@@ -47,7 +47,7 @@ char **strtow(char *str)
 		return (NULL);
 	}
 
-	arr =  (char **)malloc(sizeof(char *) * height);
+	arr =  (char **)malloc(sizeof(char *) * height - 1);
 
 	if (arr == NULL)
 	{
