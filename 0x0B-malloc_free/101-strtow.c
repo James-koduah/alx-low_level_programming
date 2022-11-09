@@ -58,7 +58,7 @@ char **strtow(char *str)
 
 	for (i = 0; i < height; i++)
 	{
-		arr[i] = malloc(sizeof(char) * vv[i]);
+		arr[i] = malloc(sizeof(char) * vv[i] + 1);
 		if (arr[i] == NULL)
 			return (NULL);
 		b =0;
