@@ -25,7 +25,7 @@ char **strtow(char *str)
 		return (NULL);
 
 	m = 0;
-	height = 0;
+	height = 1;
 	b = 0;
 	j = 0;
 	for (i = 0; i < 10; i++)
