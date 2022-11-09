@@ -64,8 +64,10 @@ char **strtow(char *str)
 		b =0;
 
 
-		for(j = m; j < len - 1; j++)
+		for(j = m; j < len; j++)
 		{
+			if (str[len - 1] == ' ')
+				break;
 			if(str[j] != ' ')
 			{
 				arr[i][b] = str[j];
