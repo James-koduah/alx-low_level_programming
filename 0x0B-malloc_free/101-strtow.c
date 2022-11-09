@@ -64,7 +64,7 @@ char **strtow(char *str)
 		b =0;
 
 
-		for(j = m; j < len; j++)
+		for(j = m; j < len - 1; j++)
 		{
 			if(str[j] != ' ')
 			{
@@ -73,7 +73,6 @@ char **strtow(char *str)
 				if(str[j + 1] == ' ')
 				{
 					m = j+1;
-
 					j = len;
 				}
 			}
