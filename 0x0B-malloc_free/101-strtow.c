@@ -15,11 +15,17 @@ char **strtow(char *str)
 	int vv[10];
 	int j;
 	int b;
+	int m;
 
+	m = 0;
 	len = strlen(str);
 	height = 0;
 	b = 0;
 	j = 0;
+	for (i = 0; i < 10; i++)
+	{
+		vv[i] = 0;
+	}
 	for (i = 0; i < len; i++)
 	{
 		if (str[i] != ' ')
@@ -32,7 +38,6 @@ char **strtow(char *str)
 			}
 		}	
 	}
-	height++;
 
 	arr =  (char **)malloc(sizeof(char *) * height - 1);
 
@@ -42,14 +47,13 @@ char **strtow(char *str)
 
 	for (i = 0; i < height; i++)
 	{
-		b = vv[i];
 		arr[i] = malloc(sizeof(char) * vv[i]);
 		if (arr[i] == NULL)
 			printf("shit\n");
 		b =0;
-		printf("good3\n");
 
-		for(; j < len; j++)
+
+		for(j = m; j < len; j++)
 		{
 			if(str[j] != ' ')
 			{
@@ -57,7 +61,8 @@ char **strtow(char *str)
 				b++;
 				if(str[j + 1] == ' ')
 				{
-					break;
+					m = j+1;
+					j = len;
 				}
 			}
 		}
