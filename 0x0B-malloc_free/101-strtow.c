@@ -21,7 +21,6 @@ char **strtow(char *str)
 	len = strlen(str);
 	if (str == NULL || len == 0 || len == 1)
 	{
-		printf("failed");
 		return (NULL);
 	}
 	m = 0;
@@ -56,7 +55,7 @@ char **strtow(char *str)
 
 	for (i = 0; i < height; i++)
 	{
-		arr[i] = malloc(sizeof(char) * vv[i]);
+		arr[i] = malloc(sizeof(char) * vv[i] + 1);
 		if (arr[i] == NULL)
 			return (NULL);
 		b =0;
@@ -71,6 +70,7 @@ char **strtow(char *str)
 				if(str[j + 1] == ' ')
 				{
 					m = j+1;
+					arr[i][b + 1] = '\0';
 					j = len;
 				}
 			}
