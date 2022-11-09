@@ -19,7 +19,7 @@ char **strtow(char *str)
 
 	
 	len = strlen(str);
-	if (str == NULL || str[0]== '\0')
+	if (str == NULL || str[0] == '\0')
 		return (NULL);
 	if (len == 0)
 		return (NULL);
@@ -45,7 +45,7 @@ char **strtow(char *str)
 		}	
 	}
 
-	arr =  (char **)malloc(sizeof(char *) * height);
+	arr =  (char **)malloc(sizeof(char *) * height - 1);
 
 	if (arr == NULL)
 	{
