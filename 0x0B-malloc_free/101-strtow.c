@@ -21,8 +21,6 @@ char **strtow(char *str)
 	len = strlen(str);
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
-	if (len == 0)
-		return (NULL);
 
 	m = 0;
 	height = 1;
@@ -43,6 +41,10 @@ char **strtow(char *str)
 				b += 1;
 			}
 		}	
+	}
+	if (height == 1)
+	{
+		return (NULL);
 	}
 
 	arr =  (char **)malloc(sizeof(char *) * height - 1);
