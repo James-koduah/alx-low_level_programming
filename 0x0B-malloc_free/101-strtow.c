@@ -17,6 +17,10 @@ char **strtow(char *str)
 	int b;
 	int m;
 
+	if (str == NULL || str == "")
+	{
+		return (NULL);
+	}
 	m = 0;
 	len = strlen(str);
 	height = 0;
@@ -42,7 +46,10 @@ char **strtow(char *str)
 	arr =  (char **)malloc(sizeof(char *) * height - 1);
 
 	if (arr == NULL)
-		printf("shit1");
+	{
+		return (NULL);
+	}
+		
 
 
 	for (i = 0; i < height; i++)
