@@ -19,7 +19,7 @@ char **strtow(char *str)
 
 	
 	len = strlen(str);
-	if (str == NULL || len == '\0')
+	if (str == NULL || str[0]== '\0')
 	{
 		return (NULL);
 	}
