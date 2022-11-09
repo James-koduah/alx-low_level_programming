@@ -17,12 +17,13 @@ char **strtow(char *str)
 	int b;
 	int m;
 
-	if (str == NULL || str == "")
+	
+	len = strlen(str);
+	if (str == NULL || len == 0)
 	{
 		return (NULL);
 	}
 	m = 0;
-	len = strlen(str);
 	height = 0;
 	b = 0;
 	j = 0;
