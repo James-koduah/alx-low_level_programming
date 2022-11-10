@@ -20,12 +20,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	len2 = strlen(s2);
 	if (n >= len2)
-		n = len2;
+		n = len2 - 1;
 
 	len = strlen(s1);
 	len += n;
 
-	arr = malloc(len - 1);
+	arr = malloc(len + 1);
 	if (arr == NULL)
 		return (NULL);
 
