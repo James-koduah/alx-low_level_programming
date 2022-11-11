@@ -8,6 +8,10 @@
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
+	void *arr;
+
+
+
 	if (old_size == new_size)
 		return (ptr);
 	if (new_size == 0 && ptr != NULL)
@@ -20,6 +24,17 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		ptr = malloc(new_size);
 		return (ptr);
 	}
+	
+	arr = ptr;
+	ptr = malloc(new_size);
+	
+	
+
+
+		printf("arr : %p\n", arr);
+		printf("ptr : %p\n", ptr);
+
+	
 
 	return (ptr);
 }
