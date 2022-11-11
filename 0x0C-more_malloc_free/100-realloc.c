@@ -37,7 +37,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);
 	}
 	fill_mem = arr;
-	for (i = 0; i < old_size && i < new_size; i++)
+	for (i = 0; i < old_size; i++)
 	{
 		fill_mem[i] = *ptr_new++;
 	}
