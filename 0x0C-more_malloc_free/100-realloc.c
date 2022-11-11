@@ -12,7 +12,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *arr;
 	char *ptr_new;
-	int i;
+	unsigned int i;
 	char *fill_mem;
 
 	/*Parameters to prevent fail*/
@@ -37,7 +37,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	fill_mem = arr;
 	for (i = 0; i < new_size; i++)
 	{
-		fill_mem[i] = *ptr_new[i];
+		fill_mem[i] = *ptr_new++;
 	}
 	free(ptr);
 
