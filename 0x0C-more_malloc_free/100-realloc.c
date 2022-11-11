@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-/**_realloc - imitate realloc
+/**
+ * _realloc - imitate realloc
  * @ptr: kksksk
  * @old_size: kskksk
  * @new_size: kskskk
@@ -9,8 +10,6 @@
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *arr;
-
-
 
 	if (old_size == new_size)
 		return (ptr);
@@ -24,17 +23,11 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		ptr = malloc(new_size);
 		return (ptr);
 	}
-	
+
 	arr = ptr;
 	ptr = malloc(new_size);
-	
-	
 
 
-		printf("arr : %p\n", arr);
-		printf("ptr : %p\n", ptr);
-
-	
 
 	return (ptr);
 }
