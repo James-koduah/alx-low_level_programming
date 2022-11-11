@@ -11,6 +11,9 @@
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *arr;
+	char *ptr_new;
+	int i;
+	char *fill_mem;
 
 	/*Parameters to prevent fail*/
 	if (old_size == new_size)
@@ -25,17 +28,18 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		ptr = malloc(new_size);
 		return (ptr);
 	}
-	
+	ptr_new = ptr;
+	arr = malloc(sizeof(*ptr_new) * new_size);
+	if (arr == NULL)
+	{
+		free(ptr);
+	}
+	fill_mem = arr;
+	for (i = 0; i < new_size; i++)
+	{
+		fill_mem[i] = *ptr_new[i];
+	}
+	free(ptr);
 
-
-
-	arr = ptr;
-	ptr = malloc(sizeof(arr) * new_size);
-
-
-
-	/*ptr = malloc(new_size);*/
-	memcpy(ptr, arr, old_size);
-
-	return (ptr);
+	return (arr);
 }
