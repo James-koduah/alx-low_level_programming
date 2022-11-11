@@ -28,7 +28,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		arr = malloc(new_size);
 		if (arr == NULL)
 			return (NULL);
-		return (ptr);
+		return (arr);
 	}
 	ptr_new = ptr;
 	arr = malloc(sizeof(*ptr_new) * new_size);
