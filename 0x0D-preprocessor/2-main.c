@@ -1,6 +1,6 @@
 #include <stdio.h>
-/*
- * main - kskksk
+/**
+ * main - print name of file
  * Return: skksk
  */
 int main(void)
