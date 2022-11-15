@@ -28,7 +28,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(bb);
 		return (NULL);
 	}
-	bb->name = name;
+	strcpy(bb->name, name);
 	bb->age = age;
 
 	aa = strlen(owner);
@@ -40,6 +40,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(bb);
 		return (NULL);
 	}
-	bb->owner = owner;
+	strcpy(bb->owner, owner);
 	return (bb);
 }
