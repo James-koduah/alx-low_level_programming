@@ -2,6 +2,13 @@
 #include <string.h>
 #include <stdlib.h>
 #include "dog.h"
+/**
+ * new_dog - kskksk
+ * @name: ksksk
+ * @age: ksksk
+ * @owner: ksksk
+ * Return: kskskks
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	int aa;
@@ -30,8 +37,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		free(bb->owner);
 		free(bb->name);
-                free(bb);
-                return (NULL);
+		free(bb);
+		return (NULL);
 	}
 	bb->owner = owner;
 	return (bb);
