@@ -22,7 +22,11 @@ int main(int ar, char *av[])
 	a = atoi(av[1]);
 	v = av[2];
 	b = atoi(av[ar - 1]);
-
+	if (*v == '/' && (a == 0 || b == 0) )
+	{
+		printf("Error\n");
+		exit(100);
+	}
 
 	printf("%d\n", get_op_func(v)(a, b));
 	return (0);
