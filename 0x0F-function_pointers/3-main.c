@@ -3,7 +3,7 @@
 #include "3-calc.h"
 /**
  * main - skskks
- * @ar - ksks
+ * @ar: ksks
  * @av: ksksk
  * Return: kskks
  */
