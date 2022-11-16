@@ -18,6 +18,11 @@ int main(int ar, char *av[])
 		printf("Error\n");
 			exit(98);
 	}
+	if (v[1] != '\0')
+	{
+		printf("Error\n");
+		exit(99);
+	}
 
 	a = atoi(av[1]);
 	v = av[2];
