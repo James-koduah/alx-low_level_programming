@@ -12,7 +12,8 @@ int main(int ar, char *av[])
 	int a;
 	int b;
 
-
+	if (ar != 4)
+		return (NULL);
 
 	a = atoi(av[1]);
 	b = atoi(av[ar - 1]);
