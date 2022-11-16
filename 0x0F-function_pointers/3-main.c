@@ -11,6 +11,7 @@ int main(int ar, char *av[])
 {
 	int a;
 	int b;
+	char *v;
 
 	if (ar != 4)
 	{
@@ -19,9 +20,10 @@ int main(int ar, char *av[])
 	}
 
 	a = atoi(av[1]);
+	v = av[2];
 	b = atoi(av[ar - 1]);
 
 
-	printf("%d\n", get_op_func(av[2])(a, b));
+	printf("%d\n", get_op_func(v)(a, b));
 	return (0);
 }
