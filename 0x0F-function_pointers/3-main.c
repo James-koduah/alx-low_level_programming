@@ -13,7 +13,10 @@ int main(int ar, char *av[])
 	int b;
 
 	if (ar != 4)
-		return (NULL);
+	{
+		printf("Error\n");
+			exit(98);
+	}
 
 	a = atoi(av[1]);
 	b = atoi(av[ar - 1]);
