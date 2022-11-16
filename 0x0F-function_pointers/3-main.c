@@ -22,7 +22,7 @@ int main(int ar, char *av[])
 	a = atoi(av[1]);
 	v = av[2];
 	b = atoi(av[ar - 1]);
-	if (*v == '/' && (a == 0 || b == 0) )
+	if (*v == '/' || *v == '%' &&  b == 0)
 	{
 		printf("Error\n");
 		exit(100);
