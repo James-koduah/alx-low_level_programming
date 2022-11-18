@@ -13,7 +13,6 @@ void print_all(const char * const format, ...)
 	float f;
 	char *s;
 
-
 	va_start(args, format);
 	i = 0;
 	while (format != NULL && format[i] != '\0')
@@ -31,7 +30,7 @@ void print_all(const char * const format, ...)
 				printf("%d", in);
 				break;
 			case 'f':
-				f = (float)va_arg(args, double);
+				f = va_arg(args, double);
 				printf("%f", f);
 				break;
 			case 's':
