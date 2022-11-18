@@ -48,6 +48,9 @@ void print_all(const char * const format, ...)
 				s = va_arg(args, char*);
 				printf("%s", s);
 				break;
+			default:
+				i += 0;
+				break;
 		}
 		i++;
 	}
