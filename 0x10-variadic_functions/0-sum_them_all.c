@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
- * sum_them_all - kdkdk
- * @n: ksksk
- * Return: kdkdkdk
+ * sum_them_all - Add all arguments together
+ * @n: number of arguments
+ * Return: sum of  arguments
  */
 int sum_them_all(const unsigned int n, ...)
 {
