@@ -16,10 +16,6 @@ void print_all(const char * const format, ...)
 	float f;
 	char *s;
 
-	if (format == NULL)
-	{
-		return;
-	}
 	format_len = strlen(format);
 	va_start(args, format);
 	i = 0;
@@ -50,6 +46,8 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				s = va_arg(args, char*);
+				if (s == NULL)
+					break;
 				printf("%s", s);
 				break;
 			default:
