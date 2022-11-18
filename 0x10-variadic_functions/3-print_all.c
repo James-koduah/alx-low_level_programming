@@ -18,41 +18,41 @@ void print_all(const char * const format, ...)
 
 	format_len = strlen(format);
 	va_start(args, format);
-	for (i = 0; i < format_len; i++)
+	i = 0;
+	while (i < format_len)
 	{
-		/*c i f s*/
-		if (format[i] == 'c')
+		if (i > 0)
 		{
-			if (i > 0)
-				printf(", ");
-			c =(char)va_arg(args, int);
-			printf("%c", c);
+			if (format[i] == 'c' ||
+				format[i] == 'i' ||
+				format[i] == 'f' ||
+				format[i] == 's'
+			   )
+			printf(", ");
 		}
-		else if (format[i] == 'i')
+		switch (format[i])
 		{
-			if (i > 0)
-				printf(", ");
-			in = va_arg(args, int);
-			printf("%d", in);
+			case 'c':
+				c = (char)va_arg(args, int);
+				printf("%c", c);
+				break;
+			case 'i':
+				in = va_arg(args, int);
+				printf("%d", in);
+				break;
+			case 'f':
+				f = (float)va_arg(args, double);
+				printf("%f", f);
+				break;
+			case 's':
+				s = va_arg(args, char*);
+				printf("%s", s);
+				break;
 		}
-		else if (format[i] == 'f')
-		{
-			if (i > 0)
-				printf(", ");
-			f = (float)va_arg(args, double);
-			printf("%f", f);
-		}
-		else if (format[i] == 's')
-		{
-			if (i > 0)
-				printf(", ");
-			s = va_arg(args, char*);
-			printf("%s", s);
-		}
-		else
-		{
-			continue;
-		}
+		i++;
 	}
+
+
+
 	printf("\n");
 }
