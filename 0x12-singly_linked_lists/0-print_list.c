@@ -9,28 +9,19 @@ size_t print_list(const list_t *h)
 {
 	int b;
 
-	/*The first node/struct*/
-	printf("[%d] ", h->len);
-	if (h->str == NULL)
+	b = 0;
+	while (h != NULL)
 	{
-		printf("(nil)\n");
+		if (h->str == NULL)
+		{
+			printf("[%d] (nil)\n", h->len);
+		}
+		else
+		{
+			printf("[%d] %s\n", h->len, h->str);
+		}
+		h = h->next;
+		b++;
 	}
-	else
-	{
-		printf("%s\n", h->str);
-	}
-	b = 1;
-
-	/*The second item in the liste which the first points to*/
-	printf("[%d] ", h->next->len);
-	if (h->next->str == NULL)
-	{
-		printf("(nil)\n");
-	}
-	else
-	{
-		printf("%s\n",h->next->str);
-	}
-	b++;
 	return (b);
 }
