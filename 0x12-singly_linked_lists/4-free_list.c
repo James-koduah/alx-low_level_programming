@@ -11,13 +11,17 @@ void free_list(list_t *head)
 
 	while (head->next != NULL)
 	{
-		h = head;
-		head = head->next;
-		free(h->str);
-		free(h->next);
-		free(h);
+		h = head->next;
+		free(head->str);
+		free(head);
+		head = h;
 	}
-	free(head->next);
+	/*
+	 * The last link is not cleared
+	 * because it's next node is NULL
+	 * so the loop will stop at the last
+	 * one hence this removal
+	*/
 	free(head->str);
 	free(head);
 }
