@@ -12,26 +12,14 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	unsigned int i;
 
 	h = *head;
-
-	/*If the head contains nothing, return -1*/
 	if (!(*head))
-	{
 		return (-1);
-	}
-
-
 	if (index == 0)
 	{
 		*head = (*head)->next;
 		free(h);
 		return (1);
 	}
-
-
-	/**
-	 * We loop until we are one step behind the node
-	 * we want to delete
-	 */
 	for (i = 0; i < (index - 1); i++)
 	{
 		if (h)
@@ -59,6 +47,4 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	h->next = hold->next;
 	free(hold);
 	return (1);
-
-
 }
