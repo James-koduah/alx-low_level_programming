@@ -20,6 +20,8 @@ unsigned int binary_to_uint(const char *b)
 	 *            : 64      +       4 + 2
 	 *        ANS : 70
 	 */
+	if (b == NULL)
+		return (0);
 	len = strlen(b);
 	power = len - 1;
 	final = 0;
