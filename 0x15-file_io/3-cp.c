@@ -41,6 +41,12 @@ int main(int ac, char *av[])
 	while (f1_read > 0)
 	{
 		f1_read = read(f1_open, buf, 1024);
+	if (f1_read == -1)
+	{
+		free(buf);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+		exit(98);
+	}
 		f2_write = write(f2_open, buf, f1_read);
 	}
 
