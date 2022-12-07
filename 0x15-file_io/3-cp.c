@@ -1,5 +1,14 @@
 #include "main.h"
 
+void errors(int file_descriptor, char type, char *file_name, char *buf)
+{
+	if (file_descriptor == -1 && type == 1)
+	{
+		free(buf);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_name);
+		exit(98);
+	}
+}
 /**
  * main - copy form one file into another
  * @ac: number of arguments given to the exec
@@ -29,12 +38,7 @@ int main(int ac, char *av[])
 
 
 	f1_open = open(av[1], O_RDONLY);
-	if (f1_open == -1)
-	{
-		free(buf);
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-		exit(98);
-	}
+	errors(f1_open, 1, av[1], buf);
 
 	f2_open = open(av[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
 	f1_read = 1;
@@ -71,4 +75,6 @@ int main(int ac, char *av[])
 	}
 	return (0);
 }
+
+
 
