@@ -72,16 +72,18 @@ int main(int ac, char *av[])
 	errors(f1_open, 'r', av[1], buf);
 
 	f2_open = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	errors(f2_open, 'w', av[2], buf);
+
 	f1_read = 1;
 	while (f1_read > 0)
 	{
 		f1_read = read(f1_open, buf, 1024);
 		errors(f1_read, 'r', av[1], buf);
+
 		f2_write = write(f2_open, buf, f1_read);
+		errors(f2_write, 'w', av[2], buf);
 	}
 
-	errors(f2_open, 'w', av[2], buf);
-	errors(f2_write, 'w', av[2], buf);
 	free(buf);
 
 	close_errors(f1_open);
