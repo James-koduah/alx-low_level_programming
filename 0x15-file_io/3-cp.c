@@ -1,6 +1,11 @@
 #include "main.h"
 
-
+/**
+ * main - copy form one file into another
+ * @ac: number of arguments given to the exec
+ * @av: strings of arguments
+ * Return: things
+ */
 
 int main(int ac, char *av[])
 {
@@ -10,38 +15,38 @@ int main(int ac, char *av[])
 	char *buf;
 
 
+	if (ac != 3)
+	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
+
 	buf = malloc(sizeof(char) * 1024);
 	if (buf == NULL)
 		return (-1);
-	if (ac != 3)
-	{
-		printf("Usage: cp file_from file_to\n");
-		exit(97);
-	}
 
 
 	f1_open = open(av[1], O_RDONLY);
 	if (f1_open == -1)
 	{
-		printf("Error: Can't read from file %s\n", av[1]);
+		free(buf);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
 
 	f2_open = open(av[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
-	if (f2_open == -1)
-	{
-		printf("Error: Can't write to %s\n", av[2]);
-		exit(99);
-	}
 	f1_read = 1;
 	while (f1_read > 0)
 	{
-		f1_read = read(f1_open, buf, 1023);
+		f1_read = read(f1_open, buf, 1024);
 		f2_write = write(f2_open, buf, f1_read);
-		if (f2_write == -1)
-			return (-1);
 	}
 
+	if (f2_open == -1 || f2_write == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+		exit(99);
+	}
 	free(buf);
 	return (0);
 }
