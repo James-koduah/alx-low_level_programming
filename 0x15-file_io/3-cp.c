@@ -5,8 +5,8 @@
 int main(int ac, char *av[])
 {
 
-	int f1_open, f1_read, f1_write;
-	int f2_open, f2_read, f2_write;
+	int f1_open, f1_read;
+	int f2_open, f2_write;
 	char *buf;
 
 
@@ -38,6 +38,8 @@ int main(int ac, char *av[])
 	{
 		f1_read = read(f1_open, buf, 1023);
 		f2_write = write(f2_open, buf, f1_read);
+		if (f2_write == -1)
+			return (-1);
 	}
 
 	free(buf);
