@@ -14,7 +14,6 @@ int main(int ac, char *av[])
 	int f2_open, f2_write;
 	char *buf;
 
-
 	if (ac != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -44,9 +43,23 @@ int main(int ac, char *av[])
 
 	if (f2_open == -1 || f2_write == -1)
 	{
+		free(buf);
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
 	free(buf);
+	f1_open = close(f1_open);
+	f2_open = close(f2_open);
+	if (f1_open == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f1_open);
+		exit(100);
+	}
+	if (f2_open == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f2_open);
+		exit(100);
+	}
 	return (0);
 }
+
