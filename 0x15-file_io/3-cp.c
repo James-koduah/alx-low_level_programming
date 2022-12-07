@@ -66,11 +66,7 @@ int main(int ac, char *av[])
 
 	buf = malloc(sizeof(char) * 1024);
 	if (buf == NULL)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-		exit(99);
-	}
-
+		errors(-1, 'w', av[2], buf);
 
 	f1_open = open(av[1], O_RDONLY);
 	errors(f1_open, 'r', av[1], buf);
