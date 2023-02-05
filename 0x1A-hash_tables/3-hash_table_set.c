@@ -5,7 +5,7 @@
  * @ht: hast table
  * @key: key of element
  * @value: value of key
- * Reutrn: 1 if success 0 if failure
+ * Return: 1 if success 0 if failure
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
