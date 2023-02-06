@@ -1,9 +1,14 @@
 #include "hash_tables.h"
 
-
+/**
+ * hash_node_delete - delete node
+ * @node: node to be deleted
+ * Return: nothing
+ */
 void hash_node_delete(hash_node_t *node)
 {
 	hash_node_t *n;
+
 	if (node == NULL)
 		return;
 
