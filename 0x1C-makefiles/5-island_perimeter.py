@@ -21,14 +21,14 @@ def island_perimeter(grid):
         if 1 in line:
             for x in range(0, len(line)):
                 if line[x] == 1:
-                    perimeter_of_cells += 4
+                    perimeter_of_cells += 4 #We start by including all sides
                     if x != (width_of_grid - 1) and line[x+1] == 1:
-                        perimeter_of_cells -= 1
+                        perimeter_of_cells -= 1 #If the right is land, exclude
                     if x != 0 and line[x-1] == 1:
-                        perimeter_of_cells -= 1
+                        perimeter_of_cells -= 1 #if the left is land, exclude
                     if i != 0 and grid[i-1][x] == 1:
-                        perimeter_of_cells -= 1
+                        perimeter_of_cells -= 1 #if the top is land, exclude
                     if i != (height_of_grid - 1) and grid[i+1][x] == 1:
-                        perimeter_of_cells -= 1
+                        perimeter_of_cells -= 1 #if the bottom is land, exclude
 
     return perimeter_of_cells
