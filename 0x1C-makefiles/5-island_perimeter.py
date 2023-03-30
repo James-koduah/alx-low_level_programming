@@ -22,14 +22,13 @@ def island_perimeter(grid):
             for x in range(0, len(line)):
                 if line[x] == 1:
                     perimeter_of_cells += 4
-                    if x != width_of_grid and line[x+1] == 1:
+                    if x != (width_of_grid - 1) and line[x+1] == 1:
                         perimeter_of_cells -= 1
                     if x != 0 and line[x-1] == 1:
                         perimeter_of_cells -= 1
                     if i != 0 and grid[i-1][x] == 1:
                         perimeter_of_cells -= 1
-                    if i != height_of_grid and grid[i+1][x] == 1:
+                    if i != (height_of_grid - 1) and grid[i+1][x] == 1:
                         perimeter_of_cells -= 1
 
     return perimeter_of_cells
-            
