@@ -4,30 +4,32 @@
 
 
 def island_perimeter(grid):
-    '''island_perimeter'''
-    island_start = False
-    end_position = []
-    start_position = []
+    '''Calculate island perimeter
+        The grid represents the island where each
+        1 represents a square of land
+        0 represents a square of water
+        There is no water in between the land Just single land mass
+        Each square of land is connected which means to calculate the perimeter
+        We don't have to calculate the connected parts
+    '''
+    height_of_grid = len(grid)
+    width_of_grid = len(grid[0])
+    perimeter_of_cells = 0
 
-    for i in range(0, len(grid)):
+    for i in range(0, height_of_grid):
         line = grid[i]
-
-        '''Calculate the starting point of the island on the x and y axis'''
-        if island_start == False and 1 in line:
+        if 1 in line:
             for x in range(0, len(line)):
                 if line[x] == 1:
-                    start_position.append(i+1)
-                    start_position.append(x+1)
-                    island_start = True
+                    perimeter_of_cells += 4
+                    if x != width_of_grid and line[x+1] == 1:
+                        perimeter_of_cells -= 1
+                    if x != 0 and line[x-1] == 1:
+                        perimeter_of_cells -= 1
+                    if i != 0 and grid[i-1][x] == 1:
+                        perimeter_of_cells -= 1
+                    if i != height_of_grid and grid[i+1][x] == 1:
+                        perimeter_of_cells -= 1
 
-        '''Calculate the ending point of the island on the x and y axis'''
-        if island_start == True and 1 not in line:
-            line = grid[i - 1] # Move back to the previous line
-            for x in range(len(line) - 1, 0, -1): # traverse backwards
-                if line[x] == 1:
-                    end_position.append(i)
-                    end_position.append(x+1)
-            break
-
-    perimeter = start_position[0] + end_position[0] + start_position[1] + end_position[1]
-    return perimeter            
+    return perimeter_of_cells
+            
